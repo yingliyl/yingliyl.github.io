@@ -106,11 +106,6 @@ var _hmt = _hmt || [];
         CV
       </a>
     
-      <a href="/talks/" class="btn btn-ghost w-full justify-start text-base-content hover:text-primary flex items-center">
-        <i class="fas fa-microphone mr-2"></i>
-        Talks
-      </a>
-    
       <a href="/contact/" class="btn btn-ghost w-full justify-start text-base-content hover:text-primary flex items-center">
         <i class="fas fa-envelope mr-2"></i>
         Contact
@@ -466,11 +461,6 @@ var _hmt = _hmt || [];
         CV
       </a>
     
-      <a href="/talks/" class="btn btn-ghost w-full justify-start text-base-content hover:text-primary flex items-center">
-        <i class="fas fa-microphone mr-2"></i>
-        Talks
-      </a>
-    
       <a href="/contact/" class="btn btn-ghost w-full justify-start text-base-content hover:text-primary flex items-center">
         <i class="fas fa-envelope mr-2"></i>
         Contact
@@ -510,203 +500,572 @@ var _hmt = _hmt || [];
 
   <!-- Content area for Desktop -->
   <div class="lg:ml-80 pt-20 px-4 py-8">
-    <!-- About Section -->
-<div class="container mx-auto px-4 py-8">
-  <h2 class="text-3xl font-bold mb-8 text-base-content">About Me</h2>
+    <div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8 text-base-content">Publications</h1>
 
-  <!-- Avatar -->
-  <div class="p-4 text-center border-base-300 flex flex-col items-center cursor-pointer lg:hidden">
-    <div class="avatar mb-4">
-      <div class="w-24 rounded-full ring ring-primary ring-offset-base-100">
-        <img
-          src="/images/ly.jpg"
-          alt="Profile"
-          class="transition-transform duration-500 hover:rotate-210 cursor-pointer rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 w-24"
-        />
+  <!-- Filters -->
+  <div class="glass-card p-4 mb-8">
+    <div class="flex flex-wrap gap-4 items-center">
+      <!-- Year Filter -->
+      <div class="form-control w-40">
+        <select class="select select-bordered" id="yearFilter" name="yearFilter">
+          <option value="">All Years</option>
+          
+            <option value="2025">2025</option>
+          
+            <option value="2023">2023</option>
+          
+            <option value="2020">2020</option>
+          
+        </select>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="form-control w-48">
+        <select class="select select-bordered" id="categoryFilter" name="categoryFilter">
+          <option value="">All Categories</option>
+          
+            <option value="Blockchain">Blockchain</option>
+          
+            <option value="Federated Learning">Federated Learning</option>
+          
+            <option value="Federated Learning, Knowledge-Defined Networking">Federated Learning, Knowledge-Defined Networking</option>
+          
+        </select>
+      </div>
+
+      <!-- Search -->
+      <div class="form-control flex-grow min-w-[200px]">
+        <input type="text" placeholder="Search publications..." class="input input-bordered" id="searchInput" />
       </div>
     </div>
-    <h2 class="text-xl font-bold text-base-content">Ying Li</h2>
-    <p class="text-base-content opacity-80">Website</p>
   </div>
 
-<!--About-->
-  <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content">
-    <div class="card-body">
-      <div class="prose max-w-none text-base">
-        Ying Li received her Ph.D. degree in Computer Science and Engineering from Northeastern University, Shenyang, China, in 2025, under the supervision of Prof. Xingwei Wang. From September 2022 to August 2024, she was a Visiting Ph.D. Researcher with the Distributed Systems Group at TU Wien (Vienna University of Technology), Austria, supervised by Prof. Schahram Dustdar (IEEE Fellow). Currently, she serves as an Assistant Researcher at the School of Computer Science and Engineering, Northeastern University. Her research interests include edge computing, knowledge-defined networking, federated learning, and blockchain.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Featured Publications -->
-<div class="container mx-auto px-4 py-8">
-  <h2 class="text-3xl font-bold mb-8 text-base-content">Featured Publications</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <!-- Publications List -->
+  <div id="publicationsList" class="list space-y-6">
     
-      <div class="card glass rounded-box shadow-md bg-base-100 text-base-content hover:shadow-lg transition-all duration-300">
-        <div class="card-body p-4">
-          <!-- Title + Type -->
-          <h3 class="card-title text-lg font-semibold flex items-center gap-2">
-            <span class="title">AI-Driven Literature Synthesis</span>
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2025"
+           data-category="federated learning">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">Federated domain generalization: A survey</span>
             
-              <div class="badge badge-primary text-xs">Journal</div>
-            
-          </h3>
-
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
           <!-- Authors / Venue / Year -->
-          <div class="opacity-80 text-sm mt-1">
+          <div class="text-base-content opacity-80 text-md mb-2">
             
-              <p class="authors font-medium">Smith A., Zhang E., Doe J.</p>
-            
-            
-              <p class="italic text-sm mt-0.5">Nature Machine Intelligence</p>
+              <p class="authors text-base">Ying Li, Xingwei Wang, Rongfei Zeng, Praveen Kumar Donta, Ilir Murturi, Min Huang, Schahram Dustdar.</p>
             
             
-              <p class="text-xs text-gray-500">2024</p>
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Federated Learning</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Federated Learning</span>
+                
+                  <span class="badge badge-outline text-xs">Domain Generalization</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">Proceedings of the IEEE</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2025</p>
             
           </div>
-
-          <!-- Buttons -->
-          <div class="card-actions justify-end mt-3 gap-2">
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Machine learning typically relies on the assumption that training and testing distributions are identical and that data is centrally stored for training and testing. However, in real-world scenarios, distributions may differ significantly and data is often distributed across different devices, organizations, or edge nodes. Consequently, it&#39;s to develop models capable of effectively generalizing across unseen distributions in data spanning various domains. In response to this challenge, there has been a surge of interest in federated domain generalization in recent years. Federated domain generalization synergizes federated learning and domain generalization techniques, facilitating collaborative model development across diverse source domains for effective generalization to unseen domains, all while maintaining data privacy. However, generalizing the federated model under domain shifts remains a complex, underexplored issue. This paper provides a comprehensive survey of the latest advancements in this field. Initially, we discuss the development process from traditional machine learning to domain adaptation and domain generalization, leading to federated domain generalization as well as provide the corresponding formal definition. Subsequently, we classify recent methodologies into four distinct categories: federated domain alignment, data manipulation, learning strategies, and aggregation optimization, detailing appropriate algorithms for each. We then overview commonly utilized datasets, applications, evaluations, and benchmarks. Conclusively, this survey outlines potential future research directions. </p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
             
-              <a href="https://doi.org/10.1016/j.molp.2017.12.003" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
+            
+              <a href="https://arxiv.org/pdf/2306.01334" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
+                <i class="fas fa-file-pdf mr-1"></i>PDF
+              </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2023"
+           data-category="blockchain">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">Three-tier storage framework based on TBchain and IPFS for protecting IoT security and privacy</span>
+            
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='https://doi.org/10.1145/3549910' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='https://doi.org/10.1145/3549910' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
+          <!-- Authors / Venue / Year -->
+          <div class="text-base-content opacity-80 text-md mb-2">
+            
+              <p class="authors text-base">Ying Li, Yaxin Yu, Xingwei Wang.</p>
+            
+            
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Blockchain</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Blockchain</span>
+                
+                  <span class="badge badge-outline text-xs">Security and Privacy</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">ACM Transactions on Internet Technology</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2023</p>
+            
+          </div>
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Recently, most of the Internet of things (IoT) infrastructures are highly centralized with single points of failure, which results in serious security and privacy issues of IoT data. Fortunately, blockchain technique can provide a decentralized and secure IoT framework to deal with security issues based on the characteristics of decentralization, non-tampering, openness, transparency, and traceability. However, the blockchain consensus protocol guarantees the safety and reliability of data, but it also brings problems such as scalability limitations and poorstorageextensibility, resulting in the inability to directly integrate blockchain and the IoT in existing conditions. In this article, a private three-tier local blockchain, Three-tier architecture Blockchain (TBchain), is proposed to solve the problem by splitting part of the transactions in the public blockchain and locking theminahigher-level blockchain TBchain. Additionally, the private blockchain TBchain is connected to the public blockchain to build a hierarchical blockchain network to provide privacy protection for the IoT data stored on the blockchain. Finally, we implement an IoT framework based on TBchain and the InterPlanetary File System (IPFS) to realize the decentralized IoT, which guarantees the user’s access control right to personal data. Experimental results show that the IoT framework based on TBchain and IPFS realizes the user’s access control right to personal data by verifying in advance to ensure the confidentiality and security of shared data, and improves the security and privacy of IoT data and transactions. Moreover, we prove that the scalability and storage extensibility of the blockchain is positively correlated with the number of data blocks in TBchain.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
+            
+              <a href="https://doi.org/https://doi.org/10.1145/3549910" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
                 <i class="ai ai-doi mr-1"></i>DOI
               </a>
             
             
-              <a href="https://example.com/papers/ai-synthesis.pdf" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3549910" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
                 <i class="fas fa-file-pdf mr-1"></i>PDF
+              </a>
+            
+            
+            
+              <a href="https://dl.acm.org/doi/abs/10.1145/3716870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
               </a>
             
           </div>
         </div>
       </div>
     
-      <div class="card glass rounded-box shadow-md bg-base-100 text-base-content hover:shadow-lg transition-all duration-300">
-        <div class="card-body p-4">
-          <!-- Title + Type -->
-          <h3 class="card-title text-lg font-semibold flex items-center gap-2">
-            <span class="title">Deep Learning for Pathology Image Segmentation</span>
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2025"
+           data-category="federated learning">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">Communication-Efficient Federated Learning for Heterogeneous Clients</span>
             
-              <div class="badge badge-primary text-xs">Conference</div>
-            
-          </h3>
-
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='https://doi.org/10.1145/3716870' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='https://doi.org/10.1145/3716870' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
           <!-- Authors / Venue / Year -->
-          <div class="opacity-80 text-sm mt-1">
+          <div class="text-base-content opacity-80 text-md mb-2">
             
-              <p class="authors font-medium">Lee B., Park S., Vega C.</p>
-            
-            
-              <p class="italic text-sm mt-0.5">CVPR</p>
+              <p class="authors text-base">Ying Li, Xingwei Wang, Haodong Li, Praveen Kumar Donta, Min Huang, Schahram Dustdar.</p>
             
             
-              <p class="text-xs text-gray-500">2023</p>
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Federated Learning</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Federated Learning</span>
+                
+                  <span class="badge badge-outline text-xs">Communication-Efficient</span>
+                
+                  <span class="badge badge-outline text-xs">Heterogeneous clients</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">ACM Transactions on Internet Technology</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2025</p>
             
           </div>
-
-          <!-- Buttons -->
-          <div class="card-actions justify-end mt-3 gap-2">
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Federated learning stands out as a promising approach within the domain of edge computing, providing a framework for collaborative training on distributed datasets without necessitating data sharing. However, federated learning involves the frequent transmission of machine learning model updates between the server and clients, resulting in high communication costs. Additionally, heterogeneous clients can further complicate the Federated Learning process and deteriorate performance. To address these challenges, we propose Adaptive Self-Knowledge Distillation-based Quality- and Reputation-Aware Cross-Device Federated Learning (ASDQR)- an efficient communication and inference framework designed for heterogeneous clients. ASDQR initiates the process by selecting high-reputation and high-quality clients to be involved in federated learning, significantly impacting communication efficiency and inference effectiveness. ASDQR also introduces a model of adaptive local self-knowledge distillation that incorporates multiple local personalized historical knowledge for more accurate inference, allowing the historical level to be dynamically adjusted across time. Finally, we present an inference-effective aggregation scheme that assigns higher weights to important and reliable local model updates based on clients’ contribution degrees when performing global model aggregation. ASDQR consistently outperforms baseline methods across all datasets and communication rounds, achieving 9.0% higher accuracy than FedAvg, 6.59% higher than MOON, 0.29% higher than FedProx, 0.2% higher than PFedSD, and 0.08% higher than FedMD on the MNIST dataset at 100 communication rounds. Similar improvements are observed on CIFAR, HAR, and WISDM datasets, demonstrating the robustness and efficiency of ASDQR in federated learning with non-IID data.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
             
-              <a href="https://doi.org/10.1001/jama.2016.9797" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
+              <a href="https://doi.org/https://doi.org/10.1145/3716870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
                 <i class="ai ai-doi mr-1"></i>DOI
               </a>
             
             
-              <a href="https://example.com/papers/pathology-segmentation.pdf" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3716870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
                 <i class="fas fa-file-pdf mr-1"></i>PDF
               </a>
             
+            
+            
+              <a href="https://dl.acm.org/doi/full/10.1145/3716870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2023"
+           data-category="federated learning">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">VARF: An Incentive Mechanism of Cross-Silo Federated Learning in MEC</span>
+            
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='10.1109/JIOT.2023.3264611' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='10.1109/JIOT.2023.3264611' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
+          <!-- Authors / Venue / Year -->
+          <div class="text-base-content opacity-80 text-md mb-2">
+            
+              <p class="authors text-base">Ying Li, Xingwei Wang, Rongfei Zeng, Mingzhou Yang, Kexin Li, Min Huang, Schahram Dustdar.</p>
+            
+            
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Federated Learning</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Cross-silo federated learning</span>
+                
+                  <span class="badge badge-outline text-xs">long-term</span>
+                
+                  <span class="badge badge-outline text-xs">multi-access edge computing</span>
+                
+                  <span class="badge badge-outline text-xs">repeated game</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">IEEE Internet of Things Journal</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2023</p>
+            
+          </div>
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Cross-silo federated learning (FL) is a privacypreserving distributed machine learning where organizations acting as clients cooperatively train a global model without uploading their raw local data. Recently, the cross-silo FL in multiaccess edge computing (MEC) is used in increasing industrial applications. Most existing research on cross-silo FL pays attention to the performance aspect, ignoring the incentive mechanism for high-quality client selection and long participation in model training for efficient and stable FL, which has prevented the widespread adoption of cross-silo FL in MEC. In this article, we propose an incentive mechanism with quality-Aware and reputation-Aware based on the infinitely repeated game for cross-silo FL named VARF. VARF selects high-quality and highreputation edge nodes (ENs) as candidates for model training in the cross-silo FL by a heuristic algorithm and then motivates the selected ENs to actively contribute their resources. VARF also models the long-term behavior of ENs in cross-silo FL as an infinitely repeated game and derives a stable and long-term cooperative strategy for clients while maximizing the amount of local data for model learning in cross-silo FL. Extensive simulations with real-world data sets demonstrate that the performance of VARF is more beneficial than other benchmarks. Meanwhile, experimental results show that cloud platforms (CPs) and ENs eventually form a long and stable cooperative relationship under the trigger strategy.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
+            
+              <a href="https://doi.org/10.1109/JIOT.2023.3264611" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
+                <i class="ai ai-doi mr-1"></i>DOI
+              </a>
+            
+            
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=10092870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
+                <i class="fas fa-file-pdf mr-1"></i>PDF
+              </a>
+            
+            
+            
+              <a href="https://ieeexplore.ieee.org/abstract/document/10092870" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2025"
+           data-category="federated learning, knowledge-defined networking">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">KDN-FLB: Knowledge-Defined Networking Through Federated Learning and Blockchain</span>
+            
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='10.1109/MC.2024.3471984' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='10.1109/MC.2024.3471984' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
+          <!-- Authors / Venue / Year -->
+          <div class="text-base-content opacity-80 text-md mb-2">
+            
+              <p class="authors text-base">Ying Li, Praveen Kumar Donta, Xingwei Wang, Ilir Murturi, Min Huang, Schahram Dustdar.</p>
+            
+            
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Federated Learning, Knowledge-Defined Networking</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Cross-silo federated learning</span>
+                
+                  <span class="badge badge-outline text-xs">long-term</span>
+                
+                  <span class="badge badge-outline text-xs">multi-access edge computing</span>
+                
+                  <span class="badge badge-outline text-xs">repeated game</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">IEEE Computer</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2025</p>
+            
+          </div>
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">In this article, we explore the opportunities and benefits of integrating federated learning and blockchain (FLB) technologies to build an adaptable and secure knowledge-defined networking (KDN) system. Our aim is to enhance network performance by ensuring self-learning, self-adapting, and self-adjustment capabilities in dynamic and decentralized network environments. The proposed conceptual architecture, KDN-FLB, also strategically addresses critical challenges in knowledge sharing and privacy preservation within network environments. We discuss the constituents, architecture, processes, and use cases of KDN-FLB in contemporary networking applications. Additionally, we analyze the benefits, challenges, and future prospects associated with KDN-FLB, making it more intelligent for large-scale, dynamic, and decentralized network environments.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
+            
+              <a href="https://doi.org/10.1109/MC.2024.3471984" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
+                <i class="ai ai-doi mr-1"></i>DOI
+              </a>
+            
+            
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=10970239" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
+                <i class="fas fa-file-pdf mr-1"></i>PDF
+              </a>
+            
+            
+            
+              <a href="https://ieeexplore.ieee.org/abstract/document/10970239" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2023"
+           data-category="federated learning">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">Federated Learning for Internet of Things</span>
+            
+              <div class="badge badge-primary">Chapter</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='10.1007/978-3-031-50514-0_3' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='10.1007/978-3-031-50514-0_3' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
+          <!-- Authors / Venue / Year -->
+          <div class="text-base-content opacity-80 text-md mb-2">
+            
+              <p class="authors text-base">Ying Li, Qiyang Zhang, Xingwei Wang, Rongfei Zeng, Haodong Li, Ilir Murturi, Schahram Dustdar, Min Huang.</p>
+            
+            
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Federated Learning</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Cross-silo federated learning</span>
+                
+                  <span class="badge badge-outline text-xs">long-term</span>
+                
+                  <span class="badge badge-outline text-xs">multi-access edge computing</span>
+                
+                  <span class="badge badge-outline text-xs">repeated game</span>
+                
+              </div>
+            
+            
+              <p class="venue italic mt-1">Learning Techniques for the Internet of Things</p>
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2023</p>
+            
+          </div>
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Cross-silo federated learning (FL) is a privacypreserving distributed machine learning where organizations acting as clients cooperatively train a global model without uploading their raw local data. Recently, the cross-silo FL in multiaccess edge computing (MEC) is used in increasing industrial applications. Most existing research on cross-silo FL pays attention to the performance aspect, ignoring the incentive mechanism for high-quality client selection and long participation in model training for efficient and stable FL, which has prevented the widespread adoption of cross-silo FL in MEC. In this article, we propose an incentive mechanism with quality-Aware and reputation-Aware based on the infinitely repeated game for cross-silo FL named VARF. VARF selects high-quality and highreputation edge nodes (ENs) as candidates for model training in the cross-silo FL by a heuristic algorithm and then motivates the selected ENs to actively contribute their resources. VARF also models the long-term behavior of ENs in cross-silo FL as an infinitely repeated game and derives a stable and long-term cooperative strategy for clients while maximizing the amount of local data for model learning in cross-silo FL. Extensive simulations with real-world data sets demonstrate that the performance of VARF is more beneficial than other benchmarks. Meanwhile, experimental results show that cloud platforms (CPs) and ENs eventually form a long and stable cooperative relationship under the trigger strategy.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
+            
+              <a href="https://doi.org/10.1007/978-3-031-50514-0_3" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
+                <i class="ai ai-doi mr-1"></i>DOI
+              </a>
+            
+            
+              <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-50514-0.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="PDF">
+                <i class="fas fa-file-pdf mr-1"></i>PDF
+              </a>
+            
+            
+            
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-50514-0_3" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card glass rounded-box shadow-lg bg-base-100 text-base-content hover:shadow-xl transition-all duration-300 publication-item"
+           data-year="2020"
+           data-category="blockchain">
+        <div class="card-body">
+          <!-- Title + Type + Badges-->
+          <h2 class="card-title text-xl font-bold flex items-center gap-2 flex-wrap">
+            <span class="title">High Trusted Cloud Storage Model Based on TChain Blockchain (in Chinese)</span>
+            
+              <div class="badge badge-primary">Journal</div>
+             	
+            <div class='altmetric-embed' data-badge-type='donut' data-doi='：10.11896/jsjkx.190800147' data-badge-popover="bottom" data-hide-no-mentions="true"></div>
+            <span class="__dimensions_badge_embed__" data-doi='：10.11896/jsjkx.190800147' data-style="small_circle" data-hide-zero-citations="true"></span>
+          </h2>
+  
+          <!-- Authors / Venue / Year -->
+          <div class="text-base-content opacity-80 text-md mb-2">
+            
+              <p class="authors text-base">LI Ying, YU Ya-xin, ZHANG Hong-yu, and LI Zhen-guo.</p>
+            
+            
+              <p class="text-md"><i class="fas fa-tag mr-1"></i>Blockchain</p>
+            
+            
+              <div class="flex flex-wrap gap-2 mt-1">
+                
+                  <span class="badge badge-outline text-xs">Tiered Hierarchical Blockchain</span>
+                
+                  <span class="badge badge-outline text-xs">Highly Trusted Cloud Storage</span>
+                
+                  <span class="badge badge-outline text-xs">Scalability</span>
+                
+                  <span class="badge badge-outline text-xs">Storage Scalability</span>
+                
+                  <span class="badge badge-outline text-xs">Metadata</span>
+                
+              </div>
+            
+            
+            
+              <p class="year text-xs text-gray-500 mt-1">2020</p>
+            
+          </div>
+  
+          <!-- Abstract -->
+          
+            <div class="mt-4">
+              <p class="abstract text-base-content opacity-90 text-sm">Data stored in the cloud can be illegally stolen or tampered with, exposing users’ data to confidentiality threats. In order to store mass data more safely and efficiently, this paper proposes a storage model CBaaS (Cloud and Blockchain as a Service) that supports the combination of index, traceability, and verifiability of Cloud storage and Blockchain, which can enhance the credibility of data in the Cloud. Secondly, blockchain consensus protocol leads to low throughput and slow processing speed of transactions, which seriously restricts the development of decentralized applications. Based on this, this paper implements a three-tier architecture Blockchain model TChain, which improves the scalability of the Blockchain and the throughput of transactions in the blockchain by dividing apart part of the blockchain and locking it in the block of a higher-level blockchain. Next, due to the demand of decentralization, blockchain occupies a large amount of storage space of massive nodes, which greatly limits the development and application of the database system based on blockchain technology. Part of the transaction is stored locally through TChain, which increases the scalability of blockchain capacity. The ETag in the cloud storage object metadata is used to identify the contents of an Object and can be used to check if the contents of the Object have changed. By storing the object metadata in the cloud storage on the blockchain, the ETag value can be used to check whether the content of the Object changes, and the data on the blockchain cannot be tampered with to verify whether the data stored on the cloud is safe and improve the reliability of the data stored on the cloud. The experimental results show that the TChain model improves the scalability and storage capacity scalability of the blockchain, and the CBaaS model also improves the reliability of data stored in the cloud.</p>
+            </div>
+          
+  
+          <!-- Action Buttons -->
+          <div class="card-actions justify-end mt-4 flex flex-wrap gap-2">
+            
+              <a href="https://doi.org/：10.11896/jsjkx.190800147" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="DOI">
+                <i class="ai ai-doi mr-1"></i>DOI
+              </a>
+            
+            
+            
+            
+              <a href="https://kns.cnki.net/kcms2/article/abstract?v=hx6LgM6qJjtxPWtsSE22chk3s0p4Qf0HBRjZybFU6keUDBJEqSk-TpwpViyxyhBR9Mx_Ds6BH1VpAJPjinf_0v1Kms4zYA10gSCsg29XRTm4KymNvAreSQRfTQ5xy_oWyHOFvCXhen-sKHXIlGTwwM6Jpv0zyQ5vbaqfxprDU9IFaoAD2bgZ9DtHpyrwvRyWsv9grHbgtC0=&amp;uniplatform=NZKPT" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" title="Project Website">
+                <i class="fas fa-globe mr-1"></i>Website
+              </a>
+            
           </div>
         </div>
       </div>
     
   </div>
-
-  <!-- View All -->
-  <div class="text-center mt-8">
-    <a href="/publications" class="btn btn-primary">View All Publications</a>
-  </div>
+  
 </div>
 
+<script>
+  const yearFilter = document.getElementById('yearFilter');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const searchInput = document.getElementById('searchInput');
+  const publications = document.querySelectorAll('.publication-item');
 
+  function filterPublications() {
+    const yearVal = yearFilter.value;
+    const categoryVal = categoryFilter.value.toLowerCase();
+    const searchVal = searchInput.value.toLowerCase();
 
-<!-- Featured Projects -->
-<div class="container mx-auto px-4 py-8">
-  <h2 class="text-3xl font-bold mb-8 text-base-content">Featured Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-      <div class="card glass rounded-box shadow-md bg-base-100 text-base-content hover:shadow-lg transition-all duration-300">
-        <div class="card-body p-4">
-          <h3 class="card-title text-lg font-semibold flex items-center gap-2">
-            <span class="title">AI-Powered Research Assistant</span>
-            
-              <div class="badge badge-primary text-xs">current</div>
-            
-          </h3>
-          <div class="opacity-80 text-sm mt-1">
-            
-              <p class="flex items-center text-sm mb-1">
-                <i class="far fa-calendar-alt mr-2"></i>2023 - Present
-              </p>
-            
-            
-          </div>
-          
-            <p class="mt-3 text-base-content opacity-90 text-sm">An AI system designed to help researchers conduct efficient literature reviews and synthesize scientific knowledge.</p>
-          
-          <div class="card-actions justify-end mt-4 gap-2 flex-wrap">
-            
-              <a href="https://research-assistant.ai" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt mr-1"></i>Website
-              </a>
-            
-            
-              <a href="https://github.com/username/ai-research-assistant" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github mr-1"></i>Code
-              </a>
-            
-          </div>
-        </div>
-      </div>
-    
-      <div class="card glass rounded-box shadow-md bg-base-100 text-base-content hover:shadow-lg transition-all duration-300">
-        <div class="card-body p-4">
-          <h3 class="card-title text-lg font-semibold flex items-center gap-2">
-            <span class="title">Next-Gen Sequencing Analysis Pipeline</span>
-            
-              <div class="badge badge-primary text-xs">current</div>
-            
-          </h3>
-          <div class="opacity-80 text-sm mt-1">
-            
-              <p class="flex items-center text-sm mb-1">
-                <i class="far fa-calendar-alt mr-2"></i>2022 - Present
-              </p>
-            
-            
-          </div>
-          
-            <p class="mt-3 text-base-content opacity-90 text-sm">An automated pipeline for NGS data processing and variant calling optimized for large datasets.</p>
-          
-          <div class="card-actions justify-end mt-4 gap-2 flex-wrap">
-            
-            
-              <a href="https://github.com/username/ngs-pipeline" class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github mr-1"></i>Code
-              </a>
-            
-          </div>
-        </div>
-      </div>
-    
-  </div>
-  <div class="text-center mt-8">
-    <a href="/projects" class="btn btn-primary">View All Projects</a>
-  </div>
-</div>
+    publications.forEach(pub => {
+      const pubYear = pub.getAttribute('data-year');
+      const pubCategory = pub.getAttribute('data-category').toLowerCase();
+      const title = pub.querySelector('.title').textContent.toLowerCase();
+      const authors = pub.querySelector('.authors').textContent.toLowerCase();
+
+      const matchesYear = !yearVal || pubYear === yearVal;
+      const matchesCategory = !categoryVal || pubCategory === categoryVal;
+      const matchesSearch = !searchVal || title.includes(searchVal) || authors.includes(searchVal);
+
+      if (matchesYear && matchesCategory && matchesSearch) {
+        pub.classList.remove('hidden');
+      } else {
+        pub.classList.add('hidden');
+      }
+    });
+  }
+
+  yearFilter.addEventListener('change', filterPublications);
+  categoryFilter.addEventListener('change', filterPublications);
+  searchInput.addEventListener('input', filterPublications);
+
+  // 初始化显示全部
+  filterPublications();
+</script>
 
   </div>
 
